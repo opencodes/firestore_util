@@ -24,13 +24,13 @@ Add this line to pubspec.yaml
 
 ```
 dependencies:
-    nb_utils: <latest_version>
+    firestore_util: <latest_version>
 ```
 
 ### Import package
 
 ```
-import 'package:nb_utils/nb_utils.dart';
+import 'package:firestore_util/firestore_util.dart';
 ```
 
 ## Usage
