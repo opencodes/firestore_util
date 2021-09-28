@@ -11,29 +11,45 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A Firestore Util Class to parse firestore fields to flat json.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Parse firestore json fields to commonly used json standard for any model class
 
 ## Getting started
+### Installation 
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add this line to pubspec.yaml
+
+```
+dependencies:
+    nb_utils: <latest_version>
+```
+
+### Import package
+
+```
+import 'package:nb_utils/nb_utils.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+
+final Response response = [Your API Response from Http client];
+return List<ModelClass>.from(
+    (response.data['documents'] as Iterable<dynamic>).map(
+    (x) {
+        return ModelClass.fromJson(FirestoreUtil.parse(x));
+    },
+    ),
+).toList();
+
 ```
 
 ## Additional information
+If you want to give suggestion, please contact me via email - rkjha.it.in@gmail.com
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+#### Thank you :)
+
