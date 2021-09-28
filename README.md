@@ -35,6 +35,14 @@ import 'package:nb_utils/nb_utils.dart';
 
 ## Usage
 
+### Call static method parse
+
+```dart
+FirestoreUtil.parse(x)
+```
+
+### Full example 
+
 ```dart
 
 final Response response = [Your API Response from Http client];
