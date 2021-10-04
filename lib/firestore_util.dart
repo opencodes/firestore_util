@@ -18,4 +18,29 @@ class FirestoreUtil {
     }
     return res;
   }
+
+  /// Returns formated map as firestore format.
+  static Map<String, dynamic> toFirestoreFormat(Map<String, dynamic> obj) {
+    Map<String, dynamic> res = {};
+    if (obj.entries.isNotEmpty) {
+      obj.forEach((k, v) {
+        if (v.runtimeType == String) {
+          res[k] = {'stringValue': v};
+        }
+        if (v.runtimeType == bool) {
+          res[k] = {'booleanValue': v};
+        }
+        if (v.runtimeType == int) {
+          res[k] = {'integerValue': v};
+        }
+        if (v.runtimeType == DateTime) {
+          res[k] = {'timestampValue': v};
+        }
+        if (v.runtimeType == Null) {
+          res[k] = {'nullValue': v};
+        }
+      });
+    }
+    return res;
+  }
 }

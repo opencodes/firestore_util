@@ -1,6 +1,6 @@
 name: firestore_util
 description: A Firestore Util Class to parse firestore fields to flat json.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/opencodes/firestore_util
 repository: https://github.com/opencodes/firestore_util
 

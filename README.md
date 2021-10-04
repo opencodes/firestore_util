@@ -36,6 +36,13 @@ import 'package:firestore_util/firestore_util.dart';
 ## Usage
 
 ### Call static method parse
+###  Supported Values
+    - "nullValue": null,
+    - "booleanValue": boolean,
+    - "integerValue": string,
+    - "doubleValue": number,
+    - "timestampValue": string,
+    - "stringValue": string,
 
 ```dart
 FirestoreUtil.parse(x)
